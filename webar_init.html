@@ -7,6 +7,10 @@ if(navigator.initAREngine) {
 	navigator.initAREngine(1).then(function(result) {
 		if(result.success) {
 			alert("result.success");
+			if (navigator.getVRDisplays) {
+				navigator.getVRDisplays().then(function (displays) {
+				});
+			}
 		} else {
 			alert("result.failed");
 		}
