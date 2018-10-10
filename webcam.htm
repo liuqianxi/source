@@ -1,0 +1,86 @@
+﻿<html><head>
+<meta charset="utf-8">
+<meta content="Display WebCam" name="title">
+<title>WebCam</title>
+</head>
+ 
+<body>
+
+<div id="videoArea" style="width:480px;height:640px">
+    <video id="video" style="position:absolute;left:0px;top:0px;width:480px;height:640px;border:solid 1px" autoplay=""></video>
+    <canvas id="canvas" width="480" height="640" style="position:absolute;left:0px;top:0px;width:480px;height:640px;border:solid red 1px"></canvas>
+</div>
+<script>
+
+
+    (function openRTC() {
+
+        var m_exArray = []; //
+        var m_envCameId = "";
+        window.URL = window.URL || window.webkitURL || window.msURL || window.oURL;
+        // 
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+        var m_video = document.querySelector('video'),
+                m_permited = false;
+        var mContent;
+		window.addEventListener('resize', onWindowResize, false);
+		function onWindowResize(){
+		}
+
+        function successsCallback(stream) {
+            m_permited = true;
+			window.stream = stream;
+            m_video.srcObject = stream;
+
+          /*  m_video.onpause = function(){
+                var top = (document.body.clientHeight - 100)/2;
+                var left = (document.body.clientWidth - 100)/2
+                mContent = document.getElementById('content');
+                mContent.style.position = 'absolute';
+                mContent.style.top = top + 'px';
+                mContent.style.left = left + 'px';
+                mContent.style.height = "100px";
+                mContent.style.width = "100px";
+                mContent.style.zIndex = 100;
+                mContent.style.display = "block";
+                mContent.onclick=function(){
+                    mContent.style.display = "none";
+                    m_video.play();
+                }
+            }*/
+        }
+
+        function accessLocalWebCam() {
+            try {
+				const constraints = window.constraints = {
+  audio: true,
+  video: true
+};
+				//var constraints = { audio: true, video: { facingMode: { exact: "environment" } } };
+				navigator.mediaDevices.getUserMedia(constraints)
+				.then(function(stream) {
+					successsCallback(stream);
+				})
+				.catch(function(err) {
+					alert(err.name + ": " + err.message);
+					console.log(err.name + ": " + err.message);
+				});
+            } catch(err) {
+                console.log("accessLocalWebCam error:" + err);
+            }
+        }
+
+        if (!navigator.getUserMedia) {
+            console.log('getUserMedia error: no such method');
+        }
+
+        if (typeof navigator.mediaDevices.enumerateDevices === 'undefined') {
+            alert('This browser does not support MediaStreamTrack.\n\nTry Chrome Canary.');
+        } else {
+			accessLocalWebCam();
+        }
+    })();
+</script>
+
+</body></html>
