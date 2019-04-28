@@ -3,7 +3,7 @@
 <meta content="Display WebCam" name="title">
 <title>WebCam</title>
 </head>
- 
+
 <body>
 
 <div id="videoArea" style="width:480px;height:640px">
@@ -18,7 +18,7 @@
         var m_exArray = []; //
         var m_envCameId = "";
         window.URL = window.URL || window.webkitURL || window.msURL || window.oURL;
-        // 
+        //
         navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
         var m_video = document.querySelector('video'),
@@ -75,11 +75,11 @@
             console.log('getUserMedia error: no such method');
         }
 
-        if (typeof navigator.mediaDevices.enumerateDevices === 'undefined') {
-            alert('This browser does not support MediaStreamTrack.\n\nTry Chrome Canary.');
-        } else {
+        //if (typeof navigator.mediaDevices.enumerateDevices === 'undefined') {
+        //    alert('This browser does not support MediaStreamTrack.\n\nTry Chrome Canary.');
+        //} else {
 			accessLocalWebCam();
-        }
+        //}
     })();
 </script>
 
