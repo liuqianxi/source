@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <body>
+<script>
+function update() {
+    document.getElementById("field2").value=document.getElementById("iframe1").allowfullscreen = "true";
+}
+</script>
 
-<iframe src="http://www.bbwdhl.cn/test/test.html" sandbox="allow-same-origin" allowfullscreen="true">
+<iframe src="http://www.bbwdhl.cn/test/test.html" id="iframe1" sandbox="allow-same-origin">
   <p>Your browser does not support iframes.</p>
 </iframe>
 
@@ -11,5 +16,6 @@
 <p>如果向 sandbox 属性添加 "allow-scripts"，则允许运行 JavaScript。</p>
 <p><b>注释：</b>IE 9 以及更早的版本不支持 sandbox 属性，Opera 12 以及更早的版本也不支持该属性。</p>
 
+<button onclick="update()">更新iframe属性</button>
 </body>
 </html>
