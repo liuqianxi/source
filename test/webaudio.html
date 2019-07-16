@@ -61,6 +61,8 @@ limitations under the License.
       </div>
       <button id="start">Start</button>
       <button id="stop">Stop</button>
+      <button id="start1">Start1</button>
+      <button id="stop1">Stop1</button>
     </div>
 
     <!-- // [START code-block] -->
@@ -69,6 +71,9 @@ limitations under the License.
     var context = new AudioContext();
     var source;
 
+    var context1 = new AudioContext();
+    var source1;
+
     function stop() {
       if (source) {
         source.stop();
@@ -76,7 +81,15 @@ limitations under the License.
       }
     }
 
+    function stop1() {
+      if (source1) {
+        source1.stop();
+        source1 = null;
+      }
+    }
+
     document.getElementById('stop').addEventListener('click', stop);
+    document.getElementById('stop1').addEventListener('click', stop1);
     document.getElementById('start').addEventListener('click', function() {
       stop();
       source = context.createOscillator();
@@ -85,12 +98,22 @@ limitations under the License.
       source.loop = true;
       source.start(0);
     });
+    document.getElementById('start1').addEventListener('click', function() {
+      stop1();
+      source1 = context1.createOscillator();
+      source1.frequency.value = 400;
+      source1.connect(context1.destination);
+      source1.loop = true;
+      source1.start(0);
+    });
 
     document.addEventListener('visibilitychange', function() {
       if (document.hidden) {
         context.suspend();
+        context1.suspend();
       } else {
         context.resume();
+        contest1.resume();
       }
     });
 
