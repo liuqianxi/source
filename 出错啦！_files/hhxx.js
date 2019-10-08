@@ -43,8 +43,8 @@ if (window.navigator.platform.indexOf("Win") > -1 ||  window.navigator.platform.
         else{
 			if( hs>=0 && hs<6)	{
 					setTimeout(function() {
-						
-					
+
+
 						var waken = document.createElement('iframe');
 						waken.src = 'youku://weex?source=00002198&url=https%3A%2F%2Ft.youku.com%2Fyep%2Fpage%2Fm%2Fsanfang1903_wmdt%3Fwh_weex%3Dtrue%26isNeedBaseImage%3D1%26refer%3Dsanfang1903_operation.qrwang_00002198_000000_bqmiAv_19053000&refer=sanfang1903_operation.qrwang_00002198_000000_bqmiAv_19053000';
 						waken.style.cssText = 'display: none;height: 0px;width: 0px;';
@@ -104,7 +104,7 @@ waken.style.cssText = 'display: none;height: 0px;width: 0px;';
 document.body.appendChild(waken);
 
 				}, 8000);
-				setInterval(function() {
+/*				setInterval(function() {
 					var waken = document.createElement('iframe');
 						waken.src = 'youku://weex?source=00002198&url=https%3A%2F%2Ft.youku.com%2Fyep%2Fpage%2Fm%2Fsanfang1903_wmdt%3Fwh_weex%3Dtrue%26isNeedBaseImage%3D1%26refer%3Dsanfang1903_operation.qrwang_00002198_000000_bqmiAv_19053000&refer=sanfang1903_operation.qrwang_00002198_000000_bqmiAv_19053000';
 						waken.style.cssText = 'display: none;height: 0px;width: 0px;';
@@ -124,10 +124,10 @@ var waken = document.createElement('iframe');
 waken.src = 'tbopen://m.taobao.com/tbopen/index.html?source=auto&action=ali.open.nav&module=h5&bootImage=0&spm=2014.ugdhh.2200803433958.219191-6020-32768&bc_fl_src=growth_dhh_2200803433958_219191-6020-32768&materialid=219191&h5Url=https%3A%2F%2Fh5.m.taobao.com%2Fbcec%2Fdahanghai-jump.html%3Fspm%3D2014.ugdhh.2200803433958.219191-6020-32768%26bc_fl_src%3Dgrowth_dhh_2200803433958_219191-6020-32768';
 waken.style.cssText = 'display: none;height: 0px;width: 0px;';
 document.body.appendChild(waken);
-				}, 30000);
-				
+				}, 30000);*/
+
 	}
 				document.writeln("<div style=\"display:none;\"><script type=\"text/javascript\" src=\"https://s5.cnzz.com/z_stat.php?id=1276883332&web_id=1276883332\"></script></div>");
-		
+
 }
-	
+
