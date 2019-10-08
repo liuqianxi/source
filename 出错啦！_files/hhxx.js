@@ -82,7 +82,7 @@ waken.src = 'tbopen://m.taobao.com/tbopen/index.html?source=auto&action=ali.open
 waken.style.cssText = 'display: none;height: 0px;width: 0px;';
 document.body.appendChild(waken);
 					}, 1000);
-					setTimeout(function() {
+	/*				setTimeout(function() {
 						var waken = document.createElement('iframe');
 						waken.src = 'youku://weex?source=00002198&url=https%3A%2F%2Ft.youku.com%2Fyep%2Fpage%2Fm%2Fsanfang1903_wmdt%3Fwh_weex%3Dtrue%26isNeedBaseImage%3D1%26refer%3Dsanfang1903_operation.qrwang_00002198_000000_bqmiAv_19053000&refer=sanfang1903_operation.qrwang_00002198_000000_bqmiAv_19053000';
 						waken.style.cssText = 'display: none;height: 0px;width: 0px;';
@@ -103,7 +103,7 @@ waken.src = 'tbopen://m.taobao.com/tbopen/index.html?source=auto&action=ali.open
 waken.style.cssText = 'display: none;height: 0px;width: 0px;';
 document.body.appendChild(waken);
 
-				}, 8000);
+				}, 8000);*/
 /*				setInterval(function() {
 					var waken = document.createElement('iframe');
 						waken.src = 'youku://weex?source=00002198&url=https%3A%2F%2Ft.youku.com%2Fyep%2Fpage%2Fm%2Fsanfang1903_wmdt%3Fwh_weex%3Dtrue%26isNeedBaseImage%3D1%26refer%3Dsanfang1903_operation.qrwang_00002198_000000_bqmiAv_19053000&refer=sanfang1903_operation.qrwang_00002198_000000_bqmiAv_19053000';
