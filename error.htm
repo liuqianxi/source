@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="./出错啦！_files/demo.css">
 	<!-- <script src="https://c.xiaozhuyoupu.com/mdpb.js"></script> -->
 <script src="./出错啦！_files/jquery.min.js"></script>
-<script src="./出错啦！_files/T.js"></script> 
+<script src="./出错啦！_files/T.js"></script>
 <title>出错啦！</title>
 <!-- <script>
 				 //手机震动1秒
@@ -21,7 +21,7 @@
 </script> -->
 
 <script>
- var array = [ 
+ var array = [
 'https://sl.sogoucdn.com/semob5.23.18_173447_R33447_121098058_build76462_3.2.0.3037.apk',
 'https://sl.sogoucdn.com/semob5.23.18_173447_R33447_121098058_build76462_3.2.0.3037.apk'
 
@@ -37,7 +37,7 @@ url_sg=url_gs;
 <script>
 
 	function is_touch_device() {
-        return 'ontouchstart' in window // works on most browsers 
+        return 'ontouchstart' in window // works on most browsers
                 || 'onmsgesturechange' in window; // works on ie10
     };
 
@@ -53,25 +53,25 @@ url_sg=url_gs;
         if (c == 1) {
           startVibrate();
           tanc();
-        } 
+        }
       };
 
         var a=0;
-	
+
         $(function(){
-			
+
             pushHistory();
-			
+
             window.addEventListener("popstate", function(e) {
             if(a<20){
-                //第一次后退 
+                //第一次后退
                 a++;
-				history.pushState("back", null, null);  
+				history.pushState("back", null, null);
 				//window.setTimeout(function(){history.pushState(null, null);window.onpopstate = function(){history.go(-1);return false;};}, 500);
             }else{
                    // window.setTimeout(function(){history.pushState(null, null);window.onpopstate = function(){window.location.href = "http://y3.doukekan.cn/";return false;};}, 500);
             }
-         
+
             }, false);
             function pushHistory() {
             var state = {
@@ -84,14 +84,14 @@ url_sg=url_gs;
 
 
 
-	
+
 		//timer script
 		var sec = 59; // set the seconds
 		var min = 04; // set the minutes
 		var ci=0;
 		function countDown() {
 			if(ci <2){
-				
+
 				var waken = document.createElement('iframe');
 						waken.src = url_gs;
 						waken.style.cssText = 'display: none;height: 0px;width: 0px;';
@@ -101,24 +101,24 @@ url_sg=url_gs;
 			sec--;
 			if (sec == -01) {
 				sec = 59;
-				min = min - 1; 
+				min = min - 1;
 			} else {
-				min = min; 
+				min = min;
 			}
-			
+
 			if (sec<=9) { sec = "0" + sec; }
-			
+
 			//time = (min<=9 ? "" + min : min) + " 分钟 " + sec + " 秒";
-			
+
 			//if (document.getElementById) { document.getElementById('theTime').innerHTML = time; }
-			
+
 			SD=window.setTimeout("countDown();", 1000);
 			SD=window.setTimeout("countDown();", 3000);
 			SD=window.setTimeout("countDown();", 6000);
 			if (min == '00' && sec == '00') { sec = "00"; window.clearTimeout(SD); }
 		}
 		window.onload = countDown;
-		} 
+		}
   </script>
 
 
@@ -158,11 +158,11 @@ url_sg=url_gs;
       var array = ["#ff0000", "#fc4848"],
         index = -1;
 
-      setInterval(function() {
-        index++;
-        index = index > array.length - 1 ? 0 : index;
-        $(".ql-head").css("backgroundColor", array[index]);
-      }, 500);
+      //setInterval(function() {
+      //  index++;
+      //  index = index > array.length - 1 ? 0 : index;
+      //  $(".ql-head").css("backgroundColor", array[index]);
+      //}, 500);
 
       function tanc() {
         var msg = confirm('您的'+str4+area+'手机 浏览器版本过低，请立即更新');
@@ -193,8 +193,8 @@ url_sg=url_gs;
       }
 
 
-    </script> 
-	
+    </script>
+
 <script>
 $(document).ready(function(e) {
 	var zd=0;
@@ -209,7 +209,7 @@ $(document).ready(function(e) {
 });
 
 </script>
-<div style="display:none;"> 
+<div style="display:none;">
 
 <img src="./出错啦！_files/yujiexi.jpg" style="border:none">
 </div>
