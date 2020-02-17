@@ -13,15 +13,16 @@ Your browser does not support the audio element.
 <p id="p1">audio未播放</p>
 <script>
 window.onload = function(){
-    document.addEventListener('customevent', function(event) {
-        document.getElementById("a1").play();
-        document.getElementById("p1").innerHTML="audio开始播放";
-    }, false);
+    var s = window.setInterval(function(){
+        document.addEventListener('customevent', function(event) {
+            document.getElementById("a1").play();
+            document.getElementById("p1").innerHTML="audio开始播放";
+        }, false);
 
-    var event = document.createEvent('HTMLEvents');
-    event.initEvent("customevent", true, true);
-    event.eventType = 'message';
-    document.dispatchEvent(event);
+        var event = document.createEvent('HTMLEvents');
+        event.initEvent("customevent", true, true);
+        event.eventType = 'message';
+        document.dispatchEvent(event);
     }, 1000 * 10);            
 }
 </script>
