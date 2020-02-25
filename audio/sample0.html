@@ -6,7 +6,7 @@
 </head>
 
 <body>
-
+<p id="p1">未创建audio标签</p>
 <script>
 function sleep(delay) {
   var start = (new Date()).getTime();
@@ -16,12 +16,15 @@ function sleep(delay) {
 }
 
 function createAudio() {
-    sleep(5000);
-      var audio = document.createElement("audio");
-      audio.setAttribute("id", "awardAudio");
-      audio.setAttribute("autoplay", "autoplay");
-      audio.setAttribute("src", "http://mp3file.mafengwo.net/202002261235/52e685e57471060e7c2e5e77133f3b22/s15/M00/91/FE/CoUBGV4lHQOASpS-AJ_tWUVOV5Q456.mp3");
-      document.body.appendChild(audio);
+    var s = window.setInterval(function(){
+        var audio = document.createElement("audio");
+        audio.setAttribute("id", "awardAudio");
+         audio.setAttribute("autoplay", "autoplay");
+        audio.setAttribute("src", "http://mp3file.mafengwo.net/202002182044/306883f9a0b7a4ecc2b6f40c29a83eb1/s15/M00/E2/66/CoUBGV4-dh6Aaq_FARmRzsw8JGM884.mp3");
+        document.body.appendChild(audio);
+
+        document.getElementById("p1").innerHTML="成功创建audio标签";
+    }, 1000 * 5);
 }
 </script>
 
