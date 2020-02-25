@@ -16,8 +16,8 @@ function sleep(delay) {
 }
 
 function createAudio() {
-    //var s = window.setTimeout(function(){
-        sleep(10000);
+    var s = window.setTimeout(function(){
+        // sleep(10000);
         var audio = document.createElement("audio");
         audio.setAttribute("id", "awardAudio");
          audio.setAttribute("autoplay", "autoplay");
@@ -25,7 +25,7 @@ function createAudio() {
         document.body.appendChild(audio);
 
         document.getElementById("p1").innerHTML="成功创建audio标签";
-    //}, 500);
+    }, 500);
 }
 </script>
 
