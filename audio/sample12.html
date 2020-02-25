@@ -1,16 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>sample4</title>
+<title>sample3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 </head>
 
 <body>
 <p id="p1">未创建audio标签</p>
-<button>click me</button>
 <script>
-window.onload = function(){
-    var s = window.setInterval(function(){
+function createAudio() {
+    var s = window.setTimeout(function(){
         var audio = document.createElement("audio");
         audio.setAttribute("id", "awardAudio");
          audio.setAttribute("autoplay", "autoplay");
@@ -18,9 +17,11 @@ window.onload = function(){
         document.body.appendChild(audio);
 
         document.getElementById("p1").innerHTML="成功创建audio标签";
-    }, 1000 * 10);            
+    }, 1001);
 }
 </script>
+
+<button onclick="createAudio()">Create Auto Audio</button>
 
 </body>
 </html>
