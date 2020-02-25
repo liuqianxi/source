@@ -16,7 +16,8 @@ function sleep(delay) {
 }
 
 function createAudio() {
-    var s = window.setTimeout(function(){
+    //var s = window.setTimeout(function(){
+        sleep(5000);
         var audio = document.createElement("audio");
         audio.setAttribute("id", "awardAudio");
          audio.setAttribute("autoplay", "autoplay");
@@ -24,7 +25,7 @@ function createAudio() {
         document.body.appendChild(audio);
 
         document.getElementById("p1").innerHTML="成功创建audio标签";
-    }, 500);
+    //}, 500);
 }
 </script>
 
