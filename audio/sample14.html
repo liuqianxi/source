@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>sample3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+<audio controls="controls" id="a1">
+  <source src="https://res.imtt.qq.com/qqbrowser_x5/zhengyuli/file/cunzai.mp3" type="audio/mp3" />
+Your browser does not support the audio element.
+</audio>
+<script>
+function createAudio() {
+      var audio = document.getElementById("a1").play();
+      audio.setAttribute("autoplay", "autoplay");
+}
+</script>
+
+<button onclick="createAudio()">Create Auto Audio</button>
+
+</body>
+</html>
