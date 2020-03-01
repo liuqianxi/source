@@ -13,12 +13,12 @@ function createAudio() {
         var audio = document.createElement("audio");
         audio.setAttribute("id", "a1");
         document.body.appendChild(audio);
+        audio.setAttribute("autoplay", "autoplay");
         document.getElementById("p1").innerHTML="成功创建audio标签";
         window.setTimeout(function(){
-            audio.setAttribute("autoplay", "autoplay");
             audio.setAttribute("src", "http://music.163.com/song/media/outer/url?id=447925558.mp3");
             document.getElementById("p1").innerHTML="成功播放audio标签";
-         }, 1001);
+         }, 800);
     }, 800);
 }
 </script>
