@@ -9,15 +9,17 @@
 <p id="p1">未创建audio标签</p>
 <script>
 function createAudio() {
-    var s = window.setTimeout(function(){
+    window.setTimeout(function(){
         var audio = document.createElement("audio");
-        audio.setAttribute("id", "awardAudio");
-         audio.setAttribute("autoplay", "autoplay");
-        audio.setAttribute("src", "http://music.163.com/song/media/outer/url?id=447925558.mp3");
+        audio.setAttribute("id", "a1");
         document.body.appendChild(audio);
-
         document.getElementById("p1").innerHTML="成功创建audio标签";
-    }, 500);
+        window.setTimeout(function(){
+            audio.setAttribute("autoplay", "autoplay");
+            audio.setAttribute("src", "http://music.163.com/song/media/outer/url?id=447925558.mp3");
+            document.getElementById("p1").innerHTML="成功播放audio标签";
+         }, 800);
+    }, 800);
 }
 </script>
 
