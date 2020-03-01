@@ -6,9 +6,7 @@
 </head>
 
 <body>
-<audio controls="controls" id="a1">
-Your browser does not support the audio element.
-</audio>
+<p id="p1">未创建audio标签</p>
 <script>
 function createAudio() {
     window.setTimeout(function(){
@@ -19,8 +17,8 @@ function createAudio() {
         document.getElementById("p1").innerHTML="成功创建audio标签";
         window.setTimeout(function(){
            document.getElementById("a1").play();
+           document.getElementById("p1").innerHTML="成功播放audio标签";
         }, 1200);
-        document.getElementById("p1").innerHTML="成功创建audio标签";
     }, 800);
 }
 </script>
