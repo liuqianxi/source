@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>sample10</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+<video controls="controls" id="a1" width=320 height=240>
+  <source src="http://1252524126.vod2.myqcloud.com/9764a7a5vodtransgzp1252524126/520bc8df5285890796372564776/v.f30.mp4"/>
+Your browser does not support the audio element.
+</video>
+<script>
+function playVideo() {
+    var s = window.setTimeout(function(){
+      document.getElementById("a1").play();
+    }, 800);
+}
+</script>
+
+<button onclick="playVideo()">Create Auto Video</button>
+
+</body>
+</html>
