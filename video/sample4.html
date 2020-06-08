@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>sample4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+<p id="p1">未创建video标签</p>
+<script>
+window.onload = function(){
+    var s = window.setInterval(function(){
+        var audio = document.createElement("video");
+        audio.setAttribute("id", "autoVideo");
+        video.setAttribute("width", "320");
+        video.setAttribute("height", "240")
+         audio.setAttribute("autoplay", "autoplay");
+        audio.setAttribute("src", "http://1252524126.vod2.myqcloud.com/9764a7a5vodtransgzp1252524126/520bc8df5285890796372564776/v.f30.mp4");
+        document.body.appendChild(video);
+
+        document.getElementById("p1").innerHTML="成功创建video标签";
+    }, 1000 * 2);            
+}
+</script>
+
+</body>
+</html>
