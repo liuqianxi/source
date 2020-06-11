@@ -13,7 +13,7 @@ Your browser does not support the audio element.
 </audio>
 <script>
 window.onload = function(){
-    var s = window.setInterval(function(){
+    var s = window.setTimeout(function(){
         document.getElementById("a1").play();
         document.getElementById("p1").innerHTML="audio开始播放";
     }, 1000 * 10);            

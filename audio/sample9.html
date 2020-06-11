@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>sample9</title>
+<title>sample10</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 </head>
 
@@ -10,22 +10,15 @@
   <source src="https://res.imtt.qq.com/qqbrowser_x5/zhengyuli/file/cunzai.mp3" type="audio/mp3" />
 Your browser does not support the audio element.
 </audio>
-<p id="p1">audio未播放</p>
 <script>
-function addCustomEvent() {
-     var event = document.createEvent('HTMLEvents');
-    event.initEvent("customevent", true, true);
-    event.eventType = 'message';
-    document.dispatchEvent(event);
-}
-
-window.onload = function(){
-        document.addEventListener('customevent', function(event) {
-            document.getElementById("a1").play();
-            document.getElementById("p1").innerHTML="audio开始播放";
-        }, false);       
+function playAudio() {
+    var s = window.setTimeout(function(){
+      document.getElementById("a1").play();
+    }, 5200);
 }
 </script>
+
+<button onclick="playAudio()">Create Auto Audio</button>
 
 </body>
 </html>
